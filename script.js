@@ -13,7 +13,7 @@ function loadDeck() {
                 deck = [];
                 data.cards.forEach(cardType => {
                     for (let i = 0; i < cardType.amount; i++) {
-                        deck.push({ title: cardType.title, description: cardType.description });
+                        deck.push({ title: cardType.title, description: cardType.description, cost: cardType.cost });
                     }
                 });
                 saveState();
@@ -59,6 +59,12 @@ function renderHand() {
         desc.textContent = card.description;
         cardDiv.appendChild(title);
         cardDiv.appendChild(desc);
+        if (card.cost) {
+            const cost = document.createElement('p');
+            cost.className = 'card-cost';
+            cost.textContent = 'Casting Cost: ' + card.cost;
+            cardDiv.appendChild(cost);
+        }
         const discardBtn = document.createElement('button');
         discardBtn.textContent = 'X';
         discardBtn.onclick = () => {
