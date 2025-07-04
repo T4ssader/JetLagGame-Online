@@ -3,6 +3,16 @@ let deck = [];
 let hand = [];
 let questions = {};
 
+function showCardOverlay(card) {
+    document.getElementById('overlay-title').textContent = card.title;
+    document.getElementById('overlay-description').textContent = card.description;
+    document.getElementById('card-overlay').classList.remove('hidden');
+}
+
+function hideCardOverlay() {
+    document.getElementById('card-overlay').classList.add('hidden');
+}
+
 function loadDeck() {
     if (localStorage.getItem('deck')) {
         deck = JSON.parse(localStorage.getItem('deck'));
@@ -52,13 +62,11 @@ function renderHand() {
     hand.forEach((card, index) => {
         const cardDiv = document.createElement('div');
         cardDiv.className = 'card';
+        cardDiv.onclick = () => showCardOverlay(card);
         const title = document.createElement('div');
         title.className = 'card-title';
         title.textContent = card.title;
-        const desc = document.createElement('p');
-        desc.textContent = card.description;
         cardDiv.appendChild(title);
-        cardDiv.appendChild(desc);
         if (card.cost) {
             const cost = document.createElement('p');
             cost.className = 'card-cost';
@@ -67,7 +75,8 @@ function renderHand() {
         }
         const discardBtn = document.createElement('button');
         discardBtn.textContent = 'X';
-        discardBtn.onclick = () => {
+        discardBtn.onclick = (e) => {
+            e.stopPropagation();
             const [discarded] = hand.splice(index, 1);
             if (discarded) {
                 deck.push(discarded);
@@ -125,6 +134,8 @@ document.getElementById('choose-hider').onclick = () => {
 document.getElementById('choose-seeker').onclick = () => {
     showScreen('seeker-screen');
 };
+
+document.getElementById('close-overlay').onclick = hideCardOverlay;
 
 document.getElementById('back-from-hider').onclick = () => showScreen('role-selection');
 
