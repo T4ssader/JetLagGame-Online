@@ -10,7 +10,12 @@ function loadDeck() {
         fetch('deck.json')
             .then(r => r.json())
             .then(data => {
-                deck = data.deck;
+                deck = [];
+                data.cards.forEach(cardType => {
+                    for (let i = 0; i < cardType.amount; i++) {
+                        deck.push({ title: cardType.title, description: cardType.description });
+                    }
+                });
                 saveState();
                 updateDeckCount();
             });
@@ -47,7 +52,13 @@ function renderHand() {
     hand.forEach((card, index) => {
         const cardDiv = document.createElement('div');
         cardDiv.className = 'card';
-        cardDiv.textContent = card;
+        const title = document.createElement('div');
+        title.className = 'card-title';
+        title.textContent = card.title;
+        const desc = document.createElement('p');
+        desc.textContent = card.description;
+        cardDiv.appendChild(title);
+        cardDiv.appendChild(desc);
         const discardBtn = document.createElement('button');
         discardBtn.textContent = 'X';
         discardBtn.onclick = () => {

@@ -1,14 +1,17 @@
 {
-  "deck": [
-    "Extra Move",
-    "Block Road",
-    "Hidden Path",
-    "Double Back",
-    "Fake Ticket",
-    "Stealth Mode",
-    "Change Line",
-    "Swap Position",
-    "Decoy",
-    "Secret Route"
+  "cards": [
+    {"title": "Red Time Bonus", "description": "temp", "amount": 25},
+    {"title": "Orange Time Bonus", "description": "temp", "amount": 15},
+    {"title": "Yellow Time Bonus", "description": "temp", "amount": 10},
+    {"title": "Green Time Bonus", "description": "temp", "amount": 3},
+    {"title": "Blue Time Bonus", "description": "temp", "amount": 2},
+    {"title": "Randomize", "description": "temp", "amount": 4},
+    {"title": "Veto", "description": "temp", "amount": 4},
+    {"title": "Duplicate", "description": "temp", "amount": 2},
+    {"title": "Move", "description": "temp", "amount": 1},
+    {"title": "Discard 1 Draw 2", "description": "temp", "amount": 4},
+    {"title": "Discard 2 Draw 3", "description": "temp", "amount": 4},
+    {"title": "Draw 1 Expand 1", "description": "temp", "amount": 2},
+    {"title": "Temp Curse", "description": "temp", "amount": 24}
   ]
 }
