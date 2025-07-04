@@ -1,0 +1,26 @@
+{
+  "Matching": [
+    "Match the metro lines to their colors.",
+    "Pair stations with their zones."
+  ],
+  "Measuring": [
+    "Estimate the distance to the next station.",
+    "How long will it take to reach downtown?"
+  ],
+  "Thermometer": [
+    "Is the station usually hot or cold?",
+    "Guess the temperature underground."
+  ],
+  "Radar": [
+    "Where are most passengers heading now?",
+    "Which exit is closest to the museum?"
+  ],
+  "Tentacles": [
+    "Name 3 nearby bus connections.",
+    "List two transfer options from here."
+  ],
+  "Photos": [
+    "Describe an advertisement you see.",
+    "Take a picture of the next train."
+  ]
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetLag Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="role-selection" class="screen">
+        <h1>JetLag Game</h1>
+        <button id="choose-hider">I am a Hider</button>
+        <button id="choose-seeker">I am a Seeker</button>
+    </div>
+
+    <div id="hider-screen" class="screen hidden">
+        <h2>Hider Hand</h2>
+        <div id="hand" class="hand"></div>
+        <button id="draw-card">Draw Card</button>
+        <p id="deck-count"></p>
+        <button id="back-from-hider">Back</button>
+    </div>
+
+    <div id="seeker-screen" class="screen hidden">
+        <h2>Seeker Questions</h2>
+        <div id="categories"></div>
+        <div id="questions" class="hidden"></div>
+        <button id="back-from-seeker">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
