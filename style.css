@@ -49,6 +49,11 @@ button {
     margin-bottom: 5px;
 }
 
+.card-cost {
+    font-style: italic;
+    margin-top: 5px;
+}
+
 .card button {
     position: absolute;
     top: 5px;
