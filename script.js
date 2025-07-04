@@ -68,7 +68,10 @@ function renderHand() {
         const discardBtn = document.createElement('button');
         discardBtn.textContent = 'X';
         discardBtn.onclick = () => {
-            hand.splice(index, 1);
+            const [discarded] = hand.splice(index, 1);
+            if (discarded) {
+                deck.push(discarded);
+            }
             saveState();
             renderHand();
         };

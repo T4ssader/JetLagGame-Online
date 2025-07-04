@@ -1,10 +1,10 @@
 {
   "cards": [
-    {"title": "Red Time Bonus", "description": "temp", "amount": 25},
-    {"title": "Orange Time Bonus", "description": "temp", "amount": 15},
-    {"title": "Yellow Time Bonus", "description": "temp", "amount": 10},
-    {"title": "Green Time Bonus", "description": "temp", "amount": 3},
-    {"title": "Blue Time Bonus", "description": "temp", "amount": 2},
+    {"title": "Common Time Bonus", "description": "Add [S2 M3 L5] minutes to your hiding time when caught while this is in your hand.", "amount": 25},
+    {"title": "Uncommon Time Bonus", "description": "Add [S4 M6 L10] minutes to your hiding time when caught while this is in your hand.", "amount": 15},
+    {"title": "Rare Time Bonus", "description": "Add [S6 M9 L15] minutes to your hiding time when caught while this is in your hand.", "amount": 10},
+    {"title": "Epic Time Bonus", "description": "Add [S8 M12 L20] minutes to your hiding time when caught while this is in your hand.", "amount": 3},
+    {"title": "Legendary Time Bonus", "description": "Add [S12 M18 L30] minutes to your hiding time when caught while this is in your hand.", "amount": 2},
     {"title": "Randomize", "description": "temp", "amount": 4},
     {"title": "Veto", "description": "temp", "amount": 4},
     {"title": "Duplicate", "description": "temp", "amount": 2},
